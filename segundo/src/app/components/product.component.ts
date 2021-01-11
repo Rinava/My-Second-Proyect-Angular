@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import{Product} from '../product.model';
+import { Product } from '../product.model';
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.component.html', //a que archivo html vamos a llamar
+  templateUrl: './product.component.html', // a que archivo html vamos a llamar //deprecated, reemplazar TSlint por ESlint
 })
 export class ProductComponent {
-  product = {
-    id: '1',
-    image: 'assets/images/camiseta.png',
-    title: 'Camiseta',
-    price: 80000,
-    description: 'bla bla bla bla bla',
-  };
+  @Input() product: Product;
+  @Output() productClicked: EventEmitter<any> = new EventEmitter();
+
+  addCart(): void {
+    console.log('añadir al carrito');
+    this.productClicked.emit(this.product.id);
+  }
 }
