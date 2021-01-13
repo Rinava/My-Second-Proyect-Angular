@@ -9,6 +9,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { ContactComponent } from './contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ContactComponent } from './contact/contact.component';
     PageNotFoundComponent,
     LayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule, CoreModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule, CoreModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
