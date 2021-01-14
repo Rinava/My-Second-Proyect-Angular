@@ -1,1 +1,22 @@
-<p>footer works!</p>
+<mat-grid-list cols="4"  rowHeight="2:1">
+  <mat-grid-tile>
+    <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <a mat-button routerLink="/products">Productos</a>
+    <ul>
+        <li>
+            <a mat-button>Ofertas</a>
+        </li>
+        <li>
+            <a mat-button>Nuevos Productos</a>
+        </li>
+    </ul>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <a mat-button routerLink="/contact">Contacto</a>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <a mat-button routerLink="/contact">Sobre mí</a>
+  </mat-grid-tile>
+</mat-grid-list>
