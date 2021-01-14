@@ -1,0 +1,29 @@
+.sidenav-container {
+  height: 100%;
+  background-color: rgb(150, 0, 62);
+  color: aliceblue;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: rgb(150, 0, 62);
+  color: aliceblue;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  background-color: crimson;
+  color: aliceblue;
+}
+
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: crimson;
+  color: aliceblue;
+}
+.link{
+  color: aliceblue;
+}
