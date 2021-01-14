@@ -36,11 +36,17 @@ const routes: Routes = [
       },
     ],
   },
-
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
+    canActivate: [AdminGuard],
+  },
   {
     path: '**', // significa que no hubo match
-    component: PageNotFoundComponent,
+    component: PageNotFoundComponent, // tiene que ir ultimo siempre
   },
+
 ];
 
 @NgModule({

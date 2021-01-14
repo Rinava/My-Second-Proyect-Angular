@@ -6,6 +6,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatBadgeModule,
     MatCardModule,
     MatGridListModule,
+    MatRadioModule,
+    MatInputModule,
+    MatSelectModule,
   ],
   exports: [
     MatButtonModule,
@@ -26,6 +32,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatBadgeModule,
     MatCardModule,
     MatGridListModule,
+    MatRadioModule,
+    MatInputModule,
+    MatSelectModule,
   ], // al colocarlo puedo usarlo
 })
 export class MaterialModule {}
