@@ -9,14 +9,19 @@ import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http'; // se instala solo en este modulo
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PageNotFoundComponent,
-    LayoutComponent,
+  declarations: [AppComponent, PageNotFoundComponent, LayoutComponent],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    SharedModule,
+    CoreModule,
+    BrowserAnimationsModule,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule, CoreModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
