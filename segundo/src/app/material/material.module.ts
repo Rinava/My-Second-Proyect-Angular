@@ -12,7 +12,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [],
@@ -30,6 +31,8 @@ import { MatListModule } from '@angular/material/list';
     MatTableModule,
     MatSidenavModule,
     MatListModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
   ],
   exports: [
     MatButtonModule,
@@ -44,6 +47,8 @@ import { MatListModule } from '@angular/material/list';
     MatTableModule,
     MatSidenavModule,
     MatListModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
   ], // al exportarlo puedo permitir que lo usen
 })
 export class MaterialModule {}

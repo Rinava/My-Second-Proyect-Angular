@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,13 +20,15 @@ import { MaterialModule } from '../material/material.module';
     CommonModule,
     RouterModule,
     MaterialModule,
+    ReactiveFormsModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   exports: [ // permite que sean utilizados por otros componentes despues
     HeaderComponent,
     FooterComponent,
     HighlightDirective,
-    ExponentialPipe
+    ExponentialPipe,
+    
   ]
 })
 export class SharedModule { }
