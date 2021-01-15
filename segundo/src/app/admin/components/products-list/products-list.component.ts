@@ -11,11 +11,20 @@ export class ProductsListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'title', 'price', 'actions'];
   constructor(private productsService: ProductsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.fetchProducts();
+  }
 
+  // tslint:disable-next-line:typedef
   fetchProducts() {
     this.productsService.getAllProducts().subscribe((products) => {
       this.products = products;
+    });
+  }
+
+  deleteProduct(id: string) {
+    this.productsService.deleteProduct(id).subscribe((rta) => {
+      this.fetchProducts(); // actualizo para que se vea que se borró
     });
   }
 }
