@@ -9,6 +9,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatTableModule } from '@angular/material/table';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -24,6 +27,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatRadioModule,
     MatInputModule,
     MatSelectModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   exports: [
     MatButtonModule,
@@ -35,6 +41,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatRadioModule,
     MatInputModule,
     MatSelectModule,
-  ], // al colocarlo puedo usarlo
+    MatTableModule,
+    MatSidenavModule,
+    MatListModule,
+  ], // al exportarlo puedo permitir que lo usen
 })
 export class MaterialModule {}
