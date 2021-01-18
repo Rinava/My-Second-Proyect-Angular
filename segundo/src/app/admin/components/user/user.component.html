@@ -1,0 +1,57 @@
+<form [formGroup]="form">
+  <!-- adentro de form iría (ngSubmit)="saveUser($event)" -->
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title> Nuevo Usuario</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input
+              placeholder="Usuario"
+              formControlName="user"
+              matInput
+              type="text"
+            />
+          </mat-form-field>
+          <mat-error *ngIf="usernameField.hasError('minLength(6)')">
+            El nombre de usuario debe ser mayor a 6 carácteres
+          </mat-error>
+          <mat-error *ngIf="usernameField.hasError('maxLength(24)')">
+            El nombre de usuario debe ser menor a 24 carácteres
+          </mat-error>
+          <mat-error *ngIf="usernameField.hasError('required')">
+            El campo es requerido
+          </mat-error>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input
+              placeholder="Contraseña"
+              formControlName="password"
+              matInput
+              type="password"
+            />
+          </mat-form-field>
+          <mat-error *ngIf="passwordField.hasError('minLength(6)')">
+            La contraseña debe ser mayor a 6 carácteres
+          </mat-error>
+          <mat-error *ngIf="passwordField.hasError('maxLength(24)')">
+            La contraseña debe ser menor a 24 carácteres
+          </mat-error>
+          <mat-error *ngIf="passwordField.hasError('required')">
+            El campo es requerido
+          </mat-error>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button type="submit" [disabled]="form.invalid">
+        Guardar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>
