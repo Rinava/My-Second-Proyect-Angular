@@ -40,4 +40,7 @@ export class FormProductComponent implements OnInit {
     });
   }
 
+  get priceField(){ // para que si tengo que hacer una validacion y despues cambio tengo consistencia de datos
+    return this.form.get('price');
+  }
 }
