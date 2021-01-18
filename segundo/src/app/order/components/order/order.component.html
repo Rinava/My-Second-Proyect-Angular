@@ -1,0 +1,20 @@
+<mat-horizontal-stepper>
+  <mat-step>
+    <ng-template matStepLabel>Productos en el carrito</ng-template>
+    <div *ngIf="products$ | async as products">
+      <!-- Este div sirve para no tener que suscribirme dos veces, creo una variable llamada products -->
+      <p *ngIf="products.length === 0">No hay Productos en el Carrito</p>
+      <ul>
+        <li *ngFor="let product of products">
+          {{ product.title }}
+        </li>
+      </ul>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Datos Personales</ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Pago</ng-template>
+  </mat-step>
+</mat-horizontal-stepper>

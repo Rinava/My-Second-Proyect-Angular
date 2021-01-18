@@ -14,6 +14,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 @NgModule({
   declarations: [],
@@ -33,6 +35,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatListModule,
     MatFormFieldModule,
     MatPaginatorModule,
+    MatStepperModule,
   ],
   exports: [
     MatButtonModule,
@@ -49,6 +52,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatListModule,
     MatFormFieldModule,
     MatPaginatorModule,
+    MatStepperModule,
   ], // al exportarlo puedo permitir que lo usen
 })
 export class MaterialModule {}

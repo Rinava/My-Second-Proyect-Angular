@@ -15,8 +15,13 @@
           <mat-icon>sentiment_satisfied</mat-icon>
         </a>
       </nav>
-      <a mat-raised-button [matBadge]="total$| async" matBadgeColor="warn">
-       <!--  async hace  la suscripcion automatiamente y cuando no se usa mas el elemento se desuscribe evitando flujos o perdidas de memoria  -->
+      <a
+        routerLink="/order"
+        mat-raised-button
+        [matBadge]="total$ | async"
+        matBadgeColor="warn"
+      >
+        <!--  async hace  la suscripcion automatiamente y cuando no se usa mas el elemento se desuscribe evitando flujos o perdidas de memoria  -->
         <mat-icon>add_shopping_cart</mat-icon>
         Carrito
       </a>

@@ -34,6 +34,11 @@ const routes: Routes = [
           import('./contact/contact.module').then((m) => m.ContactModule),
         canActivate: [AdminGuard],
       },
+      {
+        path: 'order',
+        loadChildren: () =>
+          import('./order/order.module').then((m) => m.OrderModule),
+      },
     ],
   },
   {
@@ -46,7 +51,6 @@ const routes: Routes = [
     path: '**', // significa que no hubo match
     component: PageNotFoundComponent, // tiene que ir ultimo siempre
   },
-
 ];
 
 @NgModule({
