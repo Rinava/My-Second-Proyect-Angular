@@ -10,7 +10,10 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'; // se instala solo en este modulo
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from './../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, LayoutComponent],
   imports: [
@@ -21,6 +24,9 @@ import { HttpClientModule } from '@angular/common/http'; // se instala solo en e
     SharedModule,
     CoreModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase), // necesita tener una configuración inicial
+    AngularFireAuthModule,
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

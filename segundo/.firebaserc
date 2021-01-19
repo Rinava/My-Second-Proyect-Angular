@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "segundo-30a0b": {
+      "hosting": {
+        "segundo": [
+          "segundo-30a0b"
+        ]
+      }
+    }
+  }
+}
