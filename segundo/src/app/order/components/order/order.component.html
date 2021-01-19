@@ -4,11 +4,27 @@
     <div *ngIf="products$ | async as products">
       <!-- Este div sirve para no tener que suscribirme dos veces, creo una variable llamada products -->
       <p *ngIf="products.length === 0">No hay Productos en el Carrito</p>
-      <ul>
-        <li *ngFor="let product of products">
-          {{ product.title }}
-        </li>
-      </ul>
+      <div class="row" *ngFor="let product of products">
+        <div class="col-xs-12 col-sm-2 col-md-2">
+          <div class="box">
+            <img
+              class="image"
+              [src]="product.image"
+              alt="Imagen del Producto"
+            />
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-5">
+          <div class="box">
+            {{ product.title }}
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-5">
+          <div class="box">
+            {{ product.price }}
+          </div>
+        </div>
+      </div>
     </div>
   </mat-step>
   <mat-step>
